@@ -1,0 +1,53 @@
+header{
+	height: 100px;
+	width: auto;
+	text-align: left;
+	display: block;
+}
+.logo_title{
+	text-align: center;
+	font-size: 46px;
+	font-family: 'Verdana';
+	padding-top: 25px;
+}
+#player_turn{
+	height: 30px;
+	width: 200px;
+	text-align: center;
+	font-size: 25px;
+	font-family: 'Verdana';
+	margin: 0 auto;
+}
+
+.black{
+	background-color: black;
+}
+.blue{
+	background-color: blue;
+}
+.red{
+	background-color: pink;
+}
+
+body{
+	height: 100%;
+	width: 100%;
+	text-align: left;
+	display: block;
+}
+.game_board{
+	width: 360px;
+	margin: 2em auto;
+	padding: 10px;
+	border: 2px black solid;
+	border-radius: 36px;
+} 
+.box{
+	width: 100px;
+	height: 100px;
+	display: block;
+	margin: 10px;
+	display: inline-block;
+}
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="TicTacToe" ng-controller="TicTacToecontroller">
+<head>
+	<title>Tic Tac Toe</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" href="TTT.css"/>
+  	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+	<script src="TTT.js"></script>
+</head>
+<header>
+	<div class="logo_title">
+		TIC TAC TOE
+	</div>
+</header>
+<body>
+	<div id="player_turn">{{Player_Name}} TURN</div>
+	<section class="game_board">
+		<div ng-repeat="whatever in boxes">
+			<div  ng-repeat="box in whatever" ng-class="{box:true, black:box.owner=='', blue:box.owner=='P1', red:box.owner=='P2'}" ng-click="claim(box)">
+			</div>
+		</div>
+	</section>
+</body>
+</html>
