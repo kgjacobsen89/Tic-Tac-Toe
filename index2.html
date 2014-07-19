@@ -15,8 +15,16 @@
 <body>
 	<div id="player_turn">{{Player_Name}} TURN</div>
 	<section class="game_board">
+		<div id="vertical1">
+		</div>
+		<div id="vertical2">
+		</div>
+		<div id="horizontal1">
+		</div>
+		<div id="horizontal2">
+		</div>
 		<div ng-repeat="whatever in boxes">
-			<div  ng-repeat="box in whatever" ng-class="{box:true, black:box.owner=='', blue:box.owner=='P1', red:box.owner=='P2'}" ng-click="claim(box)">
+			<div  ng-repeat="box in whatever" ng-class="{box:true, black:box.owner=='', candy:box.owner=='P1', heart:box.owner=='P2'}" ng-click="claim(box)">
 			</div>
 		</div>
 	</section>

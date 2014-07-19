@@ -20,13 +20,22 @@ header{
 }
 
 .black{
-	background-color: black;
+	background-color: rgb(65, 55, 54);
+	opacity: 0.6;
 }
-.blue{
-	background-color: blue;
+
+.candy{
+	background: url("chocolate1.png");
+	background-repeat: no-repeat;
+	box-shadow: inset 0 0 10px #000000;
+	
 }
-.red{
-	background-color: pink;
+
+.heart{
+	background: url("chocolate2.png");
+	background-repeat: no-repeat;
+	box-shadow: inset 0 0 30px #000000;
+	
 }
 
 body{
@@ -35,19 +44,69 @@ body{
 	text-align: left;
 	display: block;
 }
+
 .game_board{
-	width: 360px;
+	width: 435px;
+	height: 435px;
 	margin: 2em auto;
-	padding: 10px;
-	border: 2px black solid;
-	border-radius: 36px;
-} 
+	/*padding: 10px;*/
+	border: 20px solid;
+	border-color:rgb(66, 55, 54);
+	background: url("box2.png");
+	background-repeat: no-repeat;
+} 	
+
+#vertical1{
+	width: 20px;
+	height: 435px;
+	position: absolute;
+	z-index: 100;
+	float: left;
+	margin-left: 135px;
+	background-color: rgb(217, 189, 110);
+	box-shadow: inset 0 0 10px #000000;
+}
+
+#vertical2{
+	width: 20px;
+	height: 435px;
+	position: absolute;
+	z-index: 100;
+	float: left;
+	margin-left: 280px;
+	background-color: rgb(217, 189, 110);
+	box-shadow: inset 0 0 10px #000000;
+}
+
+#horizontal1{
+	width: 435px;
+	height: 20px;
+	position: absolute;
+	z-index: 100;
+	float: left;
+	margin-top: 135px;
+	background-color: rgb(217, 189, 110);
+	box-shadow: inset 0 0 10px #000000;
+}
+
+#horizontal2{
+	width: 435px;
+	height: 20px;
+	position: absolute;
+	z-index: 100;
+	float: left;
+	margin-top: 280px;
+	background-color: rgb(217, 189, 110);
+	box-shadow: inset 0 0 10px #000000;
+}
+
 .box{
-	width: 100px;
-	height: 100px;
-	display: block;
+	width: 125px;
+	height: 125px;
 	margin: 10px;
 	display: inline-block;
+	box-shadow: inset 0 0 10px #000000;
+
 }
 
 
