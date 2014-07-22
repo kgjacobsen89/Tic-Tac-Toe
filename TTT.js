@@ -7,26 +7,24 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope){
 	[{owner:""},{owner:""},{owner:""}]
 	];
 
-	$scope.Player_Name = "function(field)";
+	$scope.Player_Name = "Player 1";
 
-	$scope.claim = function(object){
-		if (object.owner == "P1" || object.owner == "P2"){
+	$scope.claim = function(box){
+		if (box.owner == "P1" || box.owner == "P2") {
 			alert("Sorry, that's already taken!");
-		} else {				
-				if ($scope.Player_Name == "Player 1"){				
-				object.owner = "P1";
-				$scope.Player_Name = "Player 2";
-				$scope.test();
-			} else {				
-				object.owner = "P2";
+		} else if ($scope.Player_Name == "Player 1") {				
+			box.owner = "P1";
+			$scope.Player_Name = "Player 2";
+			$scope.compare();
+		} else if ($scope.Player_Name == "Player 2") {				
+				box.owner = "P2";
 				$scope.Player_Name = "Player 1";
-				$scope.test();
-			}
-		}
+				$scope.compare();
+		} 
 	};
 
 
-	$scope.test = function(){	
+	$scope.compare = function(){	
 		var box1 = $scope.boxes[0][0];
 		var box2 = $scope.boxes[0][1];
 		var box3 = $scope.boxes[0][2];
@@ -86,7 +84,7 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope){
 			alert("P2 wins");
 			replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 		} else if ((box1.owner == "P1" || box1.owner == "P2") && (box2.owner == "P1" || box2.owner == "P2") && (box3.owner == "P1" || box3.owner == "P2") && (box4.owner == "P1" || box4.owner == "P2") && (box5.owner == "P1" || box5.owner == "P2") && (box6.owner == "P1" || box6.owner == "P2") && (box7.owner == "P1" || box7.owner == "P2") && (box8.owner == "P1" || box8.owner == "P2") && (box9.owner == "P1" || box9.owner == "P2")){
-			alert("It's a catsgame!!!");
+			alert("Catsgame!!!");
 			replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 		}
 	};
