@@ -13,6 +13,21 @@
 	</div>
 </header>
 <body>
+	<h1>Player 1, what's your name?</h1>
+		<form ng-submit="addPlayer(field)">
+    		<input type="text" name="field" ng-model="field">
+    		<input type="submit" value="Submit">
+		</form>
+		<div>
+		{{field}}
+		</div>
+	<h1>Player 2, what's your name?<h1>
+		<form>
+			<input type="text" name="Player2" ng-model="myForm.Player2" size="30" />
+		</form>
+		<div>
+		{{myForm.Player2}}
+		</div>	
 	<div id="player_turn">{{Player_Name}} TURN</div>
 	<section class="game_board">
 		<div id="vertical1">

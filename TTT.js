@@ -1,14 +1,13 @@
 var TicTacToeapp = angular.module("TicTacToe",[]);
 TicTacToeapp.controller("TicTacToecontroller",function($scope){
 
-
 	$scope.boxes = [
 	[{owner:""},{owner:""},{owner:""}],
 	[{owner:""},{owner:""},{owner:""}],
 	[{owner:""},{owner:""},{owner:""}]
 	];
 
-	$scope.Player_Name = "Player 1";
+	$scope.Player_Name = "function(field)";
 
 	$scope.claim = function(object){
 		if (object.owner == "P1" || object.owner == "P2"){
