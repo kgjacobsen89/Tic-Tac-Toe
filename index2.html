@@ -2,7 +2,7 @@
 <html ng-app="TicTacToe" ng-controller="TicTacToecontroller">
 <head>
 	<title>Tic Tac Toe</title>
-	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<!-- <link rel="stylesheet" type="text/css" href="normalize.css"/> -->
 	<link rel="stylesheet" href="TTT.css"/>
   	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
 	<script src="TTT.js"></script>
@@ -13,22 +13,16 @@
 	</div>
 </header>
 <body>
-	<h1>Player 1, what's your name?</h1>
-		<form ng-submit="addPlayer(field)">
-    		<input type="text" name="field" ng-model="field">
-    		<input type="submit" value="Submit">
-		</form>
-		<div>
-		{{field}}
-		</div>
-	<h1>Player 2, what's your name?<h1>
-		<form>
-			<input type="text" name="Player2" ng-model="myForm.Player2" size="30" />
-		</form>
-		<div>
-		{{myForm.Player2}}
-		</div>	
-	<div id="player_turn">{{Player_Name}} TURN</div>
+	<form ng-submit="submit(1)" ng-hide="formOne">Player 1, what's your name?
+		<input type="text" ng-model="textOne">
+		<input type="submit" id="submit" value="Submit">
+	</form>
+	<form ng-submit="submit(2)" ng-hide="formTwo">Player 2, what's your name?
+		<input type="text" ng-model="textTwo">
+		<input type="submit" id="submit" value="Submit">
+	</form>
+	
+	<div id="player_turn">{{Player_Name}}, it's your turn</div>
 	<section class="game_board">
 		<div id="vertical1">
 		</div>
@@ -39,7 +33,7 @@
 		<div id="horizontal2">
 		</div>
 		<div ng-repeat="whatever in boxes">
-			<div  ng-repeat="box in whatever" ng-class="{box:true, black:box.owner=='', candy:box.owner=='P1', heart:box.owner=='P2'}" ng-click="claim(box)">
+			<div ng-repeat="box in whatever" ng-class="{box:true, black:box.owner=='', candy:box.owner=='P1', heart:box.owner=='P2'}" ng-click="claim(box)">
 			</div>
 		</div>
 	</section>
