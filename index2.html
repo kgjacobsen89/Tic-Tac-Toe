@@ -2,15 +2,16 @@
 <html ng-app="TicTacToe" ng-controller="TicTacToecontroller">
 <head>
 	<title>Tic Tac Toe</title>
-	<!-- <link rel="stylesheet" type="text/css" href="normalize.css"/> -->
-	<link rel="stylesheet" href="TTT.css"/>
-  	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+	<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
 	<script src="TTT.js"></script>
+	<link rel="stylesheet" type="text/css" href="normalize.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="TTT.css"/>
 </head>
 <header>
-	<div class="logo_title">
-		TIC TAC TOE
-	</div>
+	<div class="logo_title"> XOXO Tic-Tac-Toe</div>
 </header>
 <body>
 	<form ng-submit="submit(1)" ng-hide="formOne">Player 1, what's your name?
@@ -22,8 +23,12 @@
 		<input type="submit" id="submit" value="Submit">
 	</form>
 	
-	<div id="player_turn">{{Player_Name}}, it's your turn</div>
-	<section class="game_board">
+	<div id="chocolatebox" ng-hide="beforegame" ng-click="startgame()">
+	</div>
+
+	<div id="player_turn" ng-hide="gamebegins">{{Player_Name}}, it's your turn</div>
+
+	<section class="game_board" ng-hide="gamebegins">
 		<div id="vertical1">
 		</div>
 		<div id="vertical2">

@@ -1,5 +1,5 @@
-var TicTacToeapp = angular.module("TicTacToe",[]);
-TicTacToeapp.controller("TicTacToecontroller",function($scope){
+var TicTacToeapp = angular.module("TicTacToe",["firebase"]);
+TicTacToeapp.controller("TicTacToecontroller",function($scope, $firebase){
 
 	$scope.boxes = [
 	[{owner:""},{owner:""},{owner:""}],
@@ -10,6 +10,7 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope){
 
 	$scope.formOne = false;
 	$scope.formTwo = false;
+	
 
 	$scope.submit = function(player) {
 		if (player==1) {
@@ -21,7 +22,14 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope){
 		$scope.Player_Name = $scope.textOne;
 	};
 
-	
+	$scope.gamebegins = true;
+	$scope.beforegame = false;
+
+	$scope.startgame = function(){
+		$scope.beforegame = true;
+		$scope.gamebegins = false;
+	}
+
 	$scope.Player_Turn = "Player 1";
 
 	$scope.claim = function(box){

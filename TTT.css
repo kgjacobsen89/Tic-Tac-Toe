@@ -6,10 +6,22 @@ header{
 }
 .logo_title{
 	text-align: center;
-	font-size: 46px;
-	font-family: 'Verdana';
+	font-size: 100px;
+	font-family: 'Pacifico', cursive;
 	padding-top: 25px;
+	font-weight: 400;
+	color: white;
 }
+
+#chocolatebox{
+	height: 1600px;
+	width: 2560px;
+	padding-left: 300px;
+	background: url("images/chocolatebox.png");
+	background-size: 1450px 1022px;
+	background-repeat: no-repeat;
+}
+
 #player_turn{
 	height: 30px;
 	width: 200px;
@@ -25,34 +37,33 @@ header{
 }
 
 .candy{
-	background: url("chocolate1.png");
+	background: url("images/chocolate1.png");
 	background-repeat: no-repeat;
-	box-shadow: inset 0 0 10px #000000;
-	
 }
 
 .heart{
-	background: url("chocolate2.png");
+	background: url("images/chocolate2.png");
 	background-repeat: no-repeat;
-	box-shadow: inset 0 0 30px #000000;
 	
 }
 
 body{
-	height: 100%;
-	width: 100%;
+	height: 1600px;
+	width: 2560px;
 	text-align: left;
 	display: block;
+	background: url("images/completebackground.jpg");
+	background-size: 2560px 1600px;
 }
+
 
 .game_board{
 	width: 435px;
 	height: 435px;
 	margin: 2em auto;
-	/*padding: 10px;*/
 	border: 20px solid;
-	border-color:rgb(66, 55, 54);
-	background: url("box2.png");
+	border-color: rgb(66, 55, 54);
+	background: url("images/box2.png");
 	background-repeat: no-repeat;
 } 	
 
