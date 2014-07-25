@@ -20,6 +20,46 @@ header{
 	margin: auto 700px auto 700px;
 }
 
+#X1{
+	font-size: 125px;
+	font-family: 'Pacifico', cursive;
+	font-weight: 400;
+	color: rgb(95, 26, 10);
+	/*position: absolute;*/
+	/*margin: auto 700px auto 700px;*/
+	float: left;
+}
+
+#O1{
+	font-size: 125px;
+	font-family: 'Pacifico', cursive;
+	font-weight: 400;
+	color: rgb(245, 246, 175);
+	/*position: absolute;*/
+	/*margin: auto 700px auto 700px;*/
+	float: left;
+}
+
+#X2{
+	font-size: 125px;
+	font-family: 'Pacifico', cursive;
+	font-weight: 400;
+	color: rgb(95, 26, 10);
+	/*position: absolute;*/
+	/*margin: auto 700px auto 700px;*/
+	float: left;
+}
+
+#O2{
+	font-size: 125px;
+	font-family: 'Pacifico', cursive;
+	font-weight: 400;
+	color: rgb(245, 246, 175);
+	/*position: absolute;*/
+	/*margin: auto 700px auto 700px;*/
+	float: left;
+}
+
 #PlayerFormA{
 	float: left;
 	margin-left: 20px;
@@ -145,5 +185,11 @@ header{
 	
 }
 
+.gold{
+	color: rgb(245, 246, 175);
+}
 
-
+.crimson{
+	color: rgb(95, 26, 10);
+	
+}
