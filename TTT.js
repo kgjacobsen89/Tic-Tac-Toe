@@ -97,7 +97,7 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $firebase){
 			alert($scope.textTwo + " wins!");
 			replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 		} else if (box2.owner == "P2" && box5.owner == "P2" && box8.owner == "P2"){
-			alert($scope.textTwo + "wins!");
+			alert($scope.textTwo + " wins!");
 			replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 		} else if (box3.owner == "P2" && box6.owner == "P2" && box9.owner == "P2"){
 			alert($scope.textTwo + " wins!");
@@ -115,9 +115,12 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $firebase){
 	};
 
 	function replay(box1,box2,box3,box4,box5,box6,box7,box8,box9){
-
+		
+		$scope.textOne = "";
+		$scope.textTwo = "";
 		$scope.formOne = false;
 		$scope.formTwo = false;
+		$scope.Player_Name = "";
 
 		$scope.submit = function(player) {
 			if (player==1) {
@@ -130,7 +133,7 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $firebase){
 		};
 
 		$scope.Player_Turn = "Player 1";
-		$scope.Player_Name = $scope.textOne;
+		// $scope.Player_Name = $scope.textOne;
 
 		box1.owner ="";
 		box2.owner ="";

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="TicTacToe" ng-controller="TicTacToecontroller">
 <head>
-	<title>Tic Tac Toe</title>
+	<title>XOXO Tic-Tac-Toe</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
 	<script src="https://cdn.firebase.com/v0/firebase.js"></script>
 	<script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
@@ -10,37 +10,31 @@
 	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="TTT.css"/>
 </head>
-<header>
-	<div class="logo_title"> XOXO Tic-Tac-Toe</div>
-</header>
 <body>
-	<form ng-submit="submit(1)" ng-hide="formOne">Player 1, what's your name?
-		<input type="text" ng-model="textOne">
-		<input type="submit" id="submit" value="Submit">
-	</form>
-	<form ng-submit="submit(2)" ng-hide="formTwo">Player 2, what's your name?
-		<input type="text" ng-model="textTwo">
-		<input type="submit" id="submit" value="Submit">
-	</form>
-	
-	<div id="chocolatebox" ng-hide="beforegame" ng-click="startgame()">
-	</div>
-
-	<div id="player_turn" ng-hide="gamebegins">{{Player_Name}}, it's your turn</div>
-
-	<section class="game_board" ng-hide="gamebegins">
-		<div id="vertical1">
-		</div>
-		<div id="vertical2">
-		</div>
-		<div id="horizontal1">
-		</div>
-		<div id="horizontal2">
-		</div>
-		<div ng-repeat="whatever in boxes">
-			<div ng-repeat="box in whatever" ng-class="{box:true, black:box.owner=='', candy:box.owner=='P1', heart:box.owner=='P2'}" ng-click="claim(box)">
+	<header>
+		<form id="PlayerFormA" ng-submit="submit(1)" ng-hide="formOne">Player 1, what's your name?
+			<input type="text" ng-model="textOne">
+			<input type="submit" id="submit" value="Submit">
+		</form>
+		<form id="PlayerFormB" ng-submit="submit(2)" ng-hide="formTwo">Player 2, what's your name?
+			<input type="text" ng-model="textTwo">
+			<input type="submit" id="submit" value="Submit">
+		</form>
+		<div id="title"> XOXO Tic-Tac-Toe</div>
+	</header>
+	<div id="container">
+		<div class="player_turn" ng-hide="gamebegins">{{Player_Name}}, it's your turn</div>
+		<div class="chocolatebox" ng-hide="beforegame" ng-click="startgame()"></div>
+		<section class="game_board" ng-hide="gamebegins">
+			<div id="vertical1"></div>
+			<div id="vertical2"></div>
+			<div id="horizontal1"></div>
+			<div id="horizontal2"></div>
+			<div ng-repeat="whatever in boxes">
+				<div ng-repeat="box in whatever" ng-class="{box:true, black:box.owner=='', candy:box.owner=='P1', heart:box.owner=='P2'}" ng-click="claim(box)">
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 </body>
 </html>

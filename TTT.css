@@ -1,34 +1,130 @@
-header{
-	height: 100px;
-	width: auto;
-	text-align: left;
-	display: block;
-}
-.logo_title{
-	text-align: center;
-	font-size: 100px;
-	font-family: 'Pacifico', cursive;
-	padding-top: 25px;
-	font-weight: 400;
-	color: white;
-}
-
-#chocolatebox{
+body{
 	height: 1600px;
 	width: 2560px;
-	padding-left: 300px;
-	background: url("images/chocolatebox.png");
-	background-size: 1450px 1022px;
+	background: url("images/completebackground.jpg");
+	background-size: 2560px 1600px;
 	background-repeat: no-repeat;
 }
 
-#player_turn{
-	height: 30px;
-	width: 200px;
+header{
+	height: 200px;
+	width: 2560px;
+}
+
+#title{
+	font-size: 125px;
+	font-family: 'Pacifico', cursive;
+	font-weight: 400;
+	color: white;
+	position: absolute;
+	margin: auto 700px auto 700px;
+}
+
+#PlayerFormA{
+	float: left;
+	margin-left: 20px;
+	margin-top: 75px;
+	font-size: 35px;
+	font-family: 'Pacifico', cursive;
+	color: white;
+}
+
+#PlayerFormB{
+	float: right;
+	margin-right: 20px;
+	margin-top: 75px;
+	font-size: 35px;
+	font-family: 'Pacifico', cursive;
+	color: white;
+}
+
+.container{
+	height: 1400px;
+	width: 2560px;
+}
+
+.player_turn{
+	height: 50px;
+	width: 2560px;
 	text-align: center;
-	font-size: 25px;
-	font-family: 'Verdana';
-	margin: 0 auto;
+	font-size: 50px;
+	font-family: 'Pacifico', cursive;
+	color: white;
+	/*margin: 100px;*/
+}
+
+.chocolatebox{
+	height: 1022px;
+	width: 1450px;
+	margin: 100px auto auto auto;
+	background: url("images/chocolatebox.png");
+	background-size: 1450px 1022px;
+	background-repeat: no-repeat;
+	/*background-box-shadow: 10px 5px 5px black;*/
+}
+
+.game_board{
+	width: 870px;
+	height: 870px;
+	margin: 100px auto auto auto;
+	border: 20px solid;
+	border-color: rgb(66, 55, 54);
+	background: url("images/box2.png");
+	background-repeat: no-repeat;
+	background-size: 870px 870px;
+} 	
+
+#vertical1{
+	width: 40px;
+	height: 870px;
+	position: absolute;
+	z-index: 100;
+	float: left;
+	margin-left: 270px;
+	background-color: rgb(245, 246, 175);
+	box-shadow: inset 0 0 10px #000000;
+}
+
+#vertical2{
+	width: 40px;
+	height: 870px;
+	position: absolute;
+	z-index: 100;
+	float: left;
+	margin-left: 560px;
+	background-color: rgb(245, 246, 175);
+	box-shadow: inset 0 0 10px #000000;
+}
+
+#horizontal1{
+	width: 870px;
+	height: 40px;
+	position: absolute;
+	z-index: 100;
+	float: left;
+	margin-top: 270px;
+	background-color: rgb(245, 246, 175);
+	box-shadow: inset 0 0 10px #000000;
+}
+
+#horizontal2{
+	width: 870px;
+	height: 40px;
+	position: absolute;
+	z-index: 100;
+	float: left;
+	margin-top: 560px;
+	background-color: rgb(245, 246, 175);
+	box-shadow: inset 0 0 10px #000000;
+}
+
+.box{
+	width: 250px;
+	height: 250px;
+	margin: 20px;
+	display: inline-block;
+	box-shadow: inset 0 0 10px #000000;
+
 }
 
 .black{
@@ -39,85 +135,15 @@ header{
 .candy{
 	background: url("images/chocolate1.png");
 	background-repeat: no-repeat;
+	background-size: 250px 250px;
 }
 
 .heart{
 	background: url("images/chocolate2.png");
 	background-repeat: no-repeat;
+	background-size: 250px 250px;
 	
 }
 
-body{
-	height: 1600px;
-	width: 2560px;
-	text-align: left;
-	display: block;
-	background: url("images/completebackground.jpg");
-	background-size: 2560px 1600px;
-}
-
-
-.game_board{
-	width: 435px;
-	height: 435px;
-	margin: 2em auto;
-	border: 20px solid;
-	border-color: rgb(66, 55, 54);
-	background: url("images/box2.png");
-	background-repeat: no-repeat;
-} 	
-
-#vertical1{
-	width: 20px;
-	height: 435px;
-	position: absolute;
-	z-index: 100;
-	float: left;
-	margin-left: 135px;
-	background-color: rgb(217, 189, 110);
-	box-shadow: inset 0 0 10px #000000;
-}
-
-#vertical2{
-	width: 20px;
-	height: 435px;
-	position: absolute;
-	z-index: 100;
-	float: left;
-	margin-left: 280px;
-	background-color: rgb(217, 189, 110);
-	box-shadow: inset 0 0 10px #000000;
-}
-
-#horizontal1{
-	width: 435px;
-	height: 20px;
-	position: absolute;
-	z-index: 100;
-	float: left;
-	margin-top: 135px;
-	background-color: rgb(217, 189, 110);
-	box-shadow: inset 0 0 10px #000000;
-}
-
-#horizontal2{
-	width: 435px;
-	height: 20px;
-	position: absolute;
-	z-index: 100;
-	float: left;
-	margin-top: 280px;
-	background-color: rgb(217, 189, 110);
-	box-shadow: inset 0 0 10px #000000;
-}
-
-.box{
-	width: 125px;
-	height: 125px;
-	margin: 10px;
-	display: inline-block;
-	box-shadow: inset 0 0 10px #000000;
-
-}
 
 
