@@ -98,7 +98,7 @@ header{
 .chocolatebox{
 	height: 1022px;
 	width: 1450px;
-	margin: 75px auto auto auto;
+	margin: 50px auto auto auto;
 	background: url("images/chocolatebox.png");
 	background-size: 1450px 1022px;
 	background-repeat: no-repeat;
@@ -223,6 +223,32 @@ header{
 }
 
 .wins{
+	height: 200px;
+	width: 600px;
+	float: right;
+	/*position: absolute;
+	z-index: 300;*/
+	margin-top: 300px;
+	text-align: center;
+	font-size: 150px;
+	font-family: 'Pacifico', cursive;
+	color: rgb(51, 41, 41);
+}
+
+.Cats1{
+	height: 200px;
+	width: 600px;
+	float: left;
+	/*position: absolute;
+	z-index: 300;*/
+	margin-top: 300px;
+	text-align: center;
+	font-size: 150px;
+	font-family: 'Pacifico', cursive;
+	color: rgb(51, 41, 41);
+}
+
+.Game{
 	height: 200px;
 	width: 600px;
 	float: right;

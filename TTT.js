@@ -13,6 +13,8 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $timeout, $fireba
 	$scope.winner1 = true;
 	$scope.winner2 = true;
 	$scope.wins = true;
+	$scope.Cats1 = true;
+	$scope.Game = true;
 	
 
 	$scope.submit = function(player) {
@@ -77,7 +79,7 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $timeout, $fireba
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
 			$timeout(function() {
-				alert("'There's nothing better than a good friend, except a good friend with chocolate.' - Anonymous");
+				alert("'There's nothing better than a good friend, except a good friend with chocolate.' - Charles Dickens");
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box7.owner == "P1" && box8.owner == "P1" && box9.owner == "P1"){
@@ -193,6 +195,8 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $timeout, $fireba
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if ((box1.owner == "P1" || box1.owner == "P2") && (box2.owner == "P1" || box2.owner == "P2") && (box3.owner == "P1" || box3.owner == "P2") && (box4.owner == "P1" || box4.owner == "P2") && (box5.owner == "P1" || box5.owner == "P2") && (box6.owner == "P1" || box6.owner == "P2") && (box7.owner == "P1" || box7.owner == "P2") && (box8.owner == "P1" || box8.owner == "P2") && (box9.owner == "P1" || box9.owner == "P2")){
+			$scope.Cats1 = false;
+			$scope.Game = false;
 			$scope.gamebegins1 = true;
 			$timeout(function() {
 			alert("'To witness two lovers is a spectacle for the gods.' - Johann Wolfgang von Goethe");
@@ -225,6 +229,8 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $timeout, $fireba
 		$scope.winner1 = true;
 		$scope.winner2 = true;
 		$scope.wins = true;
+		$scope.Cats1 = true;
+		$scope.Game = true;
 
 		box1.owner ="";
 		box2.owner ="";
