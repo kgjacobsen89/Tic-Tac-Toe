@@ -21,10 +21,12 @@
 			<input type="submit" id="submit" value="Submit">
 		</form>
 		<div id="title"><div id="X1">X</div><div id="O1">O</div><div id="X2">X</div><div id="O2">O</div>&nbspTic-Tac-Toe</div>
-
+		<div class="player_turn" ng-hide="gamebegins1"><span ng-class="{crimson:Player_Turn==='Player 1', gold:Player_Turn==='Player 2'}">{{Player_Name}}</span>, it's your turn</div>
 	</header>
 	<div id="container">
-		<div class="player_turn" ng-hide="gamebegins"><span ng-class="{crimson:Player_Turn==='Player 1', gold:Player_Turn==='Player 2'}">{{Player_Name}}</span>, it's your turn</div>
+		<h1 class="winner1" ng-hide="winner1">{{textOne}}</h1>
+		<h1 class="winner2" ng-hide="winner2">{{textTwo}}</h1>
+		<h1 class="wins" ng-hide="wins">Wins!</h1>
 		<div class="chocolatebox" ng-hide="beforegame" ng-click="startgame()"></div>
 		<section class="game_board" ng-hide="gamebegins">
 			<div id="vertical1"></div>
