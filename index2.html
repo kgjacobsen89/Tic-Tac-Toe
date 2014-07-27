@@ -36,7 +36,7 @@
 			<div id="horizontal1"></div>
 			<div id="horizontal2"></div>
 			<div ng-repeat="whatever in boxes">
-				<div ng-repeat="box in whatever" ng-class="{box:true, black:box.owner=='', candy:box.owner=='P1', heart:box.owner=='P2'}" ng-click="claim(box)">
+				<div ng-repeat="box in whatever" ng-class="{box:true, black:box.owner=='', candy:box.owner=='P1', heart:box.owner=='P2'}" ng-click="isDisabled || claim(box)" ng-disabled="isDisabled" ng-model="isDisabled">
 				</div>
 			</div>
 		</section>

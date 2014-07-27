@@ -7,6 +7,26 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $timeout, $fireba
 	[{owner:""},{owner:""},{owner:""}]
 	];
 	
+	$scope.quotes = [
+		"'All you need is love. But a little chocolate now and then doesn't hurt.' - Charles M. Schulz",
+		"'There's nothing better than a good friend, except a good friend with chocolate.' - Charles Dickens",
+		"'Love is a game that two can play and both win.' - Eva Gabor",
+		"'There is no remedy for love but to love more.' - Henry David Thoreau",
+		"'Love conquers all.' - Virgil",
+		"'He is not a lover who does not love forever.' - Euripides",
+		"'If you could only love enough, you could be the most powerful person in the world.' - Emmet Fox",
+		"'Love is love's reward.' - John Dryden",
+		"'Chocolate symbolizes, as does no other food, luxry, comfort, sensuality, gratification, and love.' - Karl Petzke",
+		"'The quarrels of lovers are the renewal of love.' - Jean Racine",
+		"'Never underestimate the power of chocolate.' - Anonymous",
+		"'The course of love never did run smooth.' - William Shakespeare",
+		"'Love is like war: easy to begin but very hard to stop.' - H. L. Mencken",
+		"'The way to love anything is to realize that it may be lost.' - Gilbert K. Chesterton",
+		"'Forget love. I'd rather fall in chocolate.' - Sandra J. Dykes",
+		"'Love makes the world go round, but chocolate makes the trip worthwhile.' - Anonymous",
+		"'Money can't buy love. But it can buy chocolate, and that's the next best thing.' - Anonymous",
+		"'To witness two lovers is a spectacle for the gods.' - Johann Wolfgang von Goethe"
+	];
 
 	$scope.formOne = false;
 	$scope.formTwo = false;
@@ -15,6 +35,7 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $timeout, $fireba
 	$scope.wins = true;
 	$scope.Cats1 = true;
 	$scope.Game = true;
+	$scope.isDisabled = false;
 	
 
 	$scope.submit = function(player) {
@@ -39,9 +60,10 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $timeout, $fireba
 
 	$scope.Player_Turn = "Player 1";
 
+	
 	$scope.claim = function(box){
 		if (box.owner == "P1" || box.owner == "P2") {
-	 		alert("Sorry, that's already taken!");
+ 			alert("Sorry, that's already taken!");
 		} else if ($scope.Player_Turn == "Player 1") {
 			box.owner = "P1";
 			$scope.Player_Turn = "Player 2";
@@ -70,137 +92,154 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $timeout, $fireba
 			$scope.winner1 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'All you need is love. But a little chocolate now and then doesn't hurt.' - Charles M. Schulz");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box4.owner == "P1" && box5.owner == "P1" && box6.owner == "P1"){
 			$scope.winner1 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'There's nothing better than a good friend, except a good friend with chocolate.' - Charles Dickens");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box7.owner == "P1" && box8.owner == "P1" && box9.owner == "P1"){
 			$scope.winner1 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'Love is a game that two can play and both win.' - Eva Gabor");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box1.owner == "P1" && box4.owner == "P1" && box7.owner == "P1"){
 			$scope.winner1 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'There is no remedy for love but to love more.' - Henry David Thoreau");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box2.owner == "P1" && box5.owner == "P1" && box8.owner == "P1"){
 			$scope.winner1 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'Love conquers all.' - Virgil");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box3.owner == "P1" && box6.owner == "P1" && box9.owner == "P1"){
 			$scope.winner1 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'He is not a lover who does not love forever.' - Euripides");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box1.owner == "P1" && box5.owner == "P1" && box9.owner == "P1"){
 			$scope.winner1 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'If you could only love enough, you could be the most powerful person in the world.' - Emmet Fox");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box3.owner == "P1" && box5.owner == "P1" && box7.owner == "P1"){
 			$scope.winner1 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'Love is love's reward.' - John Dryden");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box1.owner == "P2" && box2.owner == "P2" && box3.owner == "P2"){
 			$scope.winner2 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'The quarrels of lovers are the renewal of love.' - Jean Racine");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box4.owner == "P2" && box5.owner == "P2" && box6.owner == "P2"){
 			$scope.winner2 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'Never underestimate the power of chocolate.' - Anonymous");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box7.owner == "P2" && box8.owner == "P2" && box9.owner == "P2"){
 			$scope.winner2 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'The course of love never did run smooth.' - William Shakespeare");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box1.owner == "P2" && box4.owner == "P2" && box7.owner == "P2"){
 			$scope.winner2 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'Love is like war: easy to begin but very hard to stop.' - H. L. Mencken");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box2.owner == "P2" && box5.owner == "P2" && box8.owner == "P2"){
 			$scope.winner2 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'The way to love anything is to realize that it may be lost.' - Gilbert K. Chesterton");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box3.owner == "P2" && box6.owner == "P2" && box9.owner == "P2"){
 			$scope.winner2 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'Forget love. I'd rather fall in chocolate.' - Sandra J. Dykes");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box1.owner == "P2" && box5.owner == "P2" && box9.owner == "P2"){
 			$scope.winner2 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'Love makes the world go round, but chocolate makes the trip worthwhile.' - Anonymous");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if (box3.owner == "P2" && box5.owner == "P2" && box7.owner == "P2"){
 			$scope.winner2 = false;
 			$scope.wins = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-				alert("'Money can't buy love. But it can buy chocolate, and that's the next best thing. - Anonymous");
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
 				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		} else if ((box1.owner == "P1" || box1.owner == "P2") && (box2.owner == "P1" || box2.owner == "P2") && (box3.owner == "P1" || box3.owner == "P2") && (box4.owner == "P1" || box4.owner == "P2") && (box5.owner == "P1" || box5.owner == "P2") && (box6.owner == "P1" || box6.owner == "P2") && (box7.owner == "P1" || box7.owner == "P2") && (box8.owner == "P1" || box8.owner == "P2") && (box9.owner == "P1" || box9.owner == "P2")){
 			$scope.Cats1 = false;
 			$scope.Game = false;
 			$scope.gamebegins1 = true;
+			$scope.isDisabled = true;
 			$timeout(function() {
-			alert("'To witness two lovers is a spectacle for the gods.' - Johann Wolfgang von Goethe");
-			replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
+				alert($scope.quotes[Math.floor(Math.random() * $scope.quotes.length)]);
+				replay(box1,box2,box3,box4,box5,box6,box7,box8,box9);
 			}, 1500);
 		}
 	};
@@ -214,6 +253,16 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $timeout, $fireba
 	
 		$scope.Player_Name = "";
 
+		$scope.Player_Turn = "Player 1";
+
+		$scope.gamebegins1 = false;
+		$scope.winner1 = true;
+		$scope.winner2 = true;
+		$scope.wins = true;
+		$scope.Cats1 = true;
+		$scope.Game = true;
+		$scope.isDisabled = false;
+
 		$scope.submit = function(player) {
 			if (player==1) {
 				$scope.formOne = true;
@@ -221,16 +270,10 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $timeout, $fireba
 			else if (player==2) {
 				$scope.formTwo = true;
 			}
-			$scope.Player_Name = $scope.textOne;
+			// $scope.Player_Name = $scope.textOne;
 		};
 
-		$scope.Player_Turn = "Player 1";
-		$scope.gamebegins1 = false;
-		$scope.winner1 = true;
-		$scope.winner2 = true;
-		$scope.wins = true;
-		$scope.Cats1 = true;
-		$scope.Game = true;
+		
 
 		box1.owner ="";
 		box2.owner ="";
