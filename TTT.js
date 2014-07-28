@@ -272,7 +272,7 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $timeout, $fireba
 			else if (player==2) {
 				$scope.formTwo = true;
 			}
-			// $scope.Player_Name = $scope.textOne;
+			$scope.Player_Name = $scope.textOne;
 		};
 
 		
