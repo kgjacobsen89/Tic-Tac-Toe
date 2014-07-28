@@ -75,6 +75,8 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $timeout, $fireba
 			$scope.Player_Name = $scope.textOne;
 			$scope.compare();
 		}
+		$scope.formOne = true;
+		$scope.formTwo = true;
 	};
 
 	$scope.compare = function(){	
@@ -246,12 +248,12 @@ TicTacToeapp.controller("TicTacToecontroller",function($scope, $timeout, $fireba
 
 	function replay(box1,box2,box3,box4,box5,box6,box7,box8,box9){
 		
-		$scope.textOne = "";
-		$scope.textTwo = "";
+		// $scope.textOne = "";
+		// $scope.textTwo = "";
 		$scope.formOne = false;
 		$scope.formTwo = false;
 	
-		$scope.Player_Name = "";
+		$scope.Player_Name = $scope.textOne;
 
 		$scope.Player_Turn = "Player 1";
 
